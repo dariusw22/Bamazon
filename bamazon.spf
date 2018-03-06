@@ -11,7 +11,7 @@
 		<key>connection</key>
 		<dict>
 			<key>database</key>
-			<string>bamazon_db</string>
+			<string>bamazon_DB</string>
 			<key>host</key>
 			<string>127.0.0.1</string>
 			<key>name</key>
@@ -64,7 +64,7 @@
 			<key>isToolbarVisible</key>
 			<true/>
 			<key>queries</key>
-			<string>-- DROP DATABASE IF EXISTS bamazon_DB;
+			<string>DROP DATABASE IF EXISTS bamazon_DB;
 CREATE DATABASE bamazon_DB;
 USE bamazon_DB;
 
@@ -79,37 +79,39 @@ CREATE TABLE products (
 );
 
 -- Creating new rows 
-INSERT INTO products (item_id, product_name, price) 
+INSERT INTO products (product_name, price) 
 VALUES ("Iphone8", 800.00);
 
-INSERT INTO products (item_id, product_name, price)
+INSERT INTO products (product_name, price)
 VALUES ("Nike Bookbag", 100.00);
 
-INSERT INTO products (item_id, product_name, price)
+INSERT INTO products (product_name, price)
 VALUES ("Timex Watch", 70.00);
 
-INSERT INTO products (item_id, product_name, price)
+INSERT INTO products (product_name, price)
 VALUES ("Macbook Pro", 1500.00);
 
-INSERT INTO products (item_id, product_name, price)
+INSERT INTO products (product_name, price)
 VALUES ("Adidas Pants", 65.00);
 
-INSERT INTO products (item_id, product_name, price)
+INSERT INTO products (product_name, price)
 VALUES ("Yamaha", 2000.00);
 
-INSERT INTO products (item_id, product_name, price)
+INSERT INTO products (product_name, price)
 VALUES ("Bic Pens", 5.00);
 
-INSERT INTO products (item_id, product_name, price)
+INSERT INTO products product_name, price)
 VALUES ("fire Tv Stick", 40.00);
 
-INSERT INTO products (item_id, product_name, price)
+INSERT INTO products (product_name, price)
 VALUES ("Playstation 4", 400.00);
 
-INSERT INTO products (item_id, product_name, price)
+INSERT INTO products (product_name, price)
 VALUES ("Jenga", 10.00);
 
-SELECT * FROM products;</string>
+SELECT * FROM products;
+
+</string>
 			<key>view</key>
 			<string>SP_VIEW_CUSTOMQUERY</string>
 			<key>windowVerticalDividerPosition</key>
@@ -124,6 +126,41 @@ SELECT * FROM products;</string>
 	<array/>
 	<key>queryHistory</key>
 	<array>
+		<string>-- DROP DATABASE IF EXISTS bamazon_DB;
+CREATE DATABASE bamazon_DB;
+USE bamazon_DB;
+-- Createing new table named products
+CREATE TABLE products (
+    id INT NOT NULL AUTO_INCREMENT,
+    product_name VARCHAR (100) NOT NULL,
+    department_name VARCHAR (100) NOT NULL,
+    price DECIMAL(10,2) NULL,
+    stock_quantity INTEGER (100) NOT NULL,
+    PRIMARY KEY (id)
+);
+-- Creating new rows 
+INSERT INTO products (product_name, price) 
+VALUES ("Iphone8", 800.00);
+INSERT INTO products (product_name, price)
+VALUES ("Nike Bookbag", 100.00);
+INSERT INTO products (product_name, price)
+VALUES ("Timex Watch", 70.00);
+INSERT INTO products (product_name, price)
+VALUES ("Macbook Pro", 1500.00);
+INSERT INTO products (product_name, price)
+VALUES ("Adidas Pants", 65.00);
+INSERT INTO products (product_name, price)
+VALUES ("Yamaha", 2000.00);
+INSERT INTO products (product_name, price)
+VALUES ("Bic Pens", 5.00);
+INSERT INTO products product_name, price)
+VALUES ("fire Tv Stick", 40.00);
+INSERT INTO products (product_name, price)
+VALUES ("Playstation 4", 400.00);
+INSERT INTO products (product_name, price)
+VALUES ("Jenga", 10.00)</string>
+		<string>INSERT INTO products (product_name, price)
+VALUES ("Jenga", 10.00)</string>
 		<string>-- DROP DATABASE IF EXISTS bamazon_DB;
 CREATE DATABASE bamazon_DB</string>
 		<string>USE bamazon_DB</string>
